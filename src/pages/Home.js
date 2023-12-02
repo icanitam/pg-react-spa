@@ -1,10 +1,8 @@
-const { Link } = require("react-router-dom");
-
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to the Homepage</h1>
-      <Link to="/course">Course</Link>
+    <div className="Page">
+      <h1>You are in the Home page!</h1>
+      <h3>URL: http://localhost:3000/</h3>
     </div>
   );
 };

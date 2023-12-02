@@ -1,28 +1,27 @@
-import logo from "./logo.svg";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
-import NotFound from "./pages/NotFound";
-import Root from "./Root";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <NotFound />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/course", element: <Courses /> },
-    ],
-  },
-]);
+import Search from "./pages/Search";
+import List from "./pages/List";
 
 function App() {
   return (
-    <>
-      <RouterProvider router={router}></RouterProvider>
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/courses">Courses</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Courses />}>
+            <Route path="search" element={<Search />} />
+            <Route path="list" element={<List />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
