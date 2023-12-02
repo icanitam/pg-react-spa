@@ -71,3 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Reffs
 - [A Beginner’s Guide to React js — Part 2](https://medium.com/@Rushabh_/a-beginners-guide-to-react-js-part-2-3ffb55f0dc52)
+- [Implement Nested Routes in React.js – React Router DOM V6](https://www.geeksforgeeks.org/implement-nested-routes-in-react-js-react-router-dom-v6/)
